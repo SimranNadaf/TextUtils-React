@@ -10,18 +10,18 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   
-  const custom1=()=>{
-    props.color("#322152");
-  }
-  const custom2=()=>{
-    props.color("#2d076b");
-  }
-  const custom3=()=>{
-    props.color("#042f6e");
-  }
-  const custom4=()=>{
-    props.color("#243856");
-  }
+  // const custom1=()=>{
+  //   props.color("#322152");
+  // }
+  // const custom2=()=>{
+  //   props.color("#2d076b");
+  // }
+  // const custom3=()=>{
+  //   props.color("#042f6e");
+  // }
+  // const custom4=()=>{
+  //   props.color("#243856");
+  // }
   return (
     <>
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
@@ -44,10 +44,10 @@ export default function Navbar(props) {
         </ul>
 
 
-        <button type="button" className="btn mx-2" style={{backgroundColor:"#322152", padding:12, borderRadius:50}}  onClick={custom1}></button>
+        {/* <button type="button" className="btn mx-2" style={{backgroundColor:"#322152", padding:12, borderRadius:50}}  onClick={custom1}></button>
         <button  type="button" className="btn mx-2" style={{backgroundColor:"#2d076b", padding:12, borderRadius:50}} onClick={custom2}></button>
         <button type="button" className="btn mx-2" style={{backgroundColor:"#042f6e", padding:12, borderRadius:50}} onClick={custom3}></button>
-        <button type="button" className="btn mx-2" style={{backgroundColor:"#243856", padding:12, borderRadius:50}} onClick={custom4}></button>
+        <button type="button" className="btn mx-2" style={{backgroundColor:"#243856", padding:12, borderRadius:50}} onClick={custom4}></button> */}
          
 
             <div className={`form-check form-switch text-${props.mode==="dark"?"light":"dark"}`}>

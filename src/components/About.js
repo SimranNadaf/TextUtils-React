@@ -1,39 +1,27 @@
 import React from "react";
-import { useState } from "react";
 
-export default function About() {
 
-    const [MyStyle, setMyStyle] = useState({
-        color:"black",
-        backgroundColor:"white"});
+export default function About(props) {
 
-    const darkmode=(event)=>{
-        if(MyStyle.color==="black"){
-            setMyStyle({
-                color:"white",
-                backgroundColor:"black",
-                
-            });
-            setBtnText("Enable Light Mode");
-        }
-        else{
-           setMyStyle({
-            color:"black",
-            backgroundColor:"white"
-           });
-           setBtnText("Enable Dark Mode");
-        }
-    }
-    
-    const [btnText, setBtnText]=useState("Enable Dark Mode");
+    let MyStyle={
+        // color:props.mode==="light"?"black":"white",
+        // backgroundColor:props.mode==="light"?"white":"black"
+        color:props.mode==="light"?"black":"white",
+        backgroundColor:props.mode==="light"?"white":"#21375a",
+        // boder:"5px solid",
+        // borderColor:"white"
+      };
+
+
   return (
     <>
     
+    
     <div className="container" style={MyStyle}>
-        <h1>About Us</h1>
-        <div className="accordion accordion-flush" id="accordionFlushExample" >
+    <h1>About Us</h1>
+        <div className="accordion accordion-flush" id="accordionFlushExample">
         <div className="accordion-item">
-          <h2 className="accordion-header" id="flush-headingOne">
+          <h2 className="accordion-header" id="flush-headingOne" >
             <button style={MyStyle}
               className="accordion-button collapsed"
               type="button"
@@ -41,9 +29,9 @@ export default function About() {
               data-bs-target="#flush-collapseOne"
               aria-expanded="false"
               aria-controls="flush-collapseOne"
-             
+              
             >
-              Accordion Item #1
+              Features of TextUtils
             </button>
           </h2>
           <div
@@ -53,9 +41,9 @@ export default function About() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body" style={MyStyle}>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              first item's accordion body.
+            TextUtils can Convert text to UpperCase to LowerCase and vise varsa. 
+            it is will copy text, clear text, remove extra spaces 
+            and also removes special characters in text.
             </div>
           </div>
         </div>
@@ -69,7 +57,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="flush-collapseTwo"
             >
-              Accordion Item #2
+              Our Specialities
             </button>
           </h2>
           <div
@@ -79,10 +67,9 @@ export default function About() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body" style={MyStyle}>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              second item's accordion body. Let's imagine this being filled with
-              some actual content.
+            Count Words and also Count Characters.
+            it also show you that how seconds will take to read the text.
+            Preview will show text that are present in textbox.
             </div>
           </div>
         </div>
@@ -96,7 +83,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="flush-collapseThree"
             >
-              Accordion Item #3
+              TextUtils
             </button>
           </h2>
           <div
@@ -106,17 +93,12 @@ export default function About() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body" style={MyStyle}>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> class. This is the
-              third item's accordion body. Nothing more exciting happening here
-              in terms of content, but just filling up the space to make it
-              look, at least at first glance, a bit more representative of how
-              this would look in a real-world application.
+            An interface for splitting strings according to rules that are opaque to the user of this interface.
             </div>
           </div>
         </div>
       </div>
-      <button type="button" className="btn btn-primary my-3" onClick={darkmode}>{btnText}</button>
+      
     </div>
 
     </>
