@@ -91,13 +91,13 @@ export default function Textfield(props) {
         <br/>
         <button type="button" disabled={text.length===0} className="btn btn-primary mx-3 my-3" onClick={handleUp}>To UpperCase</button>
         <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleLow}>To LowerCase</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleClear}>Clear Text</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleCopy}>Copy Text</button>
         <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleChar}>Remove Special Charaters</button>
         <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleSpace}>Remove Extra Spaces</button>
+        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleCopy}>Copy Text</button>
+        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleClear}>Clear Text</button>
         <div className='my-3'>
         <h2>Your Text Summary</h2>
-        <p>{text.split(' ').filter((element)=>{return element.length!==0}).length} Words and {text.split('').filter((element)=>{return element!==" "}).length} Charaters</p> 
+        <p>{text.split(/\s/).filter((element)=>{return element.length!==0}).length} Words and {text.split('').filter((element)=>{return element!==" "}).length} Charaters</p> 
         <p>{text.split(' ').filter((element)=>{return element.length!==0}).length * 0.46} Seconds to read</p> 
         </div>
         <div className='my-3'>

@@ -2,17 +2,17 @@
 
 // import './App.css';
 import Navbar from './components/Navbar';
-import About from './components/About';
+// import About from './components/About';
 import Textfield from './components/Textfield';
 import Alert from './components/Alert';
 import { useState } from 'react';
 import React from 'react';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [alert,setAlert]=useState(null);
@@ -55,26 +55,27 @@ function App() {
   
   return (
   <>
-  <Router>
+  {/* <Router> */}
+  
     <Navbar title={"TextUtils"} AboutText={"About US"} mode={mode} toggle={togglemode}/> 
   
     {/* <Navbar title={"TextUtils"} AboutText={"About US"} mode={mode} toggle={togglemode} color={customColor}/>  */}
     <Alert alert={alert}/>
-
-    <div className="container my-5">
+    <div className="container mx-3">
+    <Textfield title="Enter your text below" mode={mode} alert={showAlert}/>
+    </div>
+    {/* <div className="container my-5">
     <Routes>
         <Route path="/" element={<Textfield title="Enter your text below" mode={mode} alert={showAlert}/>} />
         <Route path="/about" element={<About mode={mode} />} />
       </Routes>
-    </div>
+    </div> */}
   
    
 
-    {/* <div className="container mx-3">
-    <Textfield title="Enter your text below" mode={mode} alert={showAlert}/>
-    </div> */}
 
-</Router>
+
+{/* </Router> */}
     
  
   </>
