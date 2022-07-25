@@ -36,21 +36,24 @@ function App() {
     }, 3000);
   }
 
-  const togglemode=()=>{
-    if(mode==="light"){
-      setMode("dark");
-      document.body.style.backgroundColor="#15243a";
-      showAlert("Dark Mode Is Enable","success");
-      // //Dynamically changing Title of Page
-      // document.title="TextUtile _ Dark Mode";
-    }
-    else{
-      setMode("light");
-      document.body.style.backgroundColor="white";
-      showAlert("Light Mode Is Enable","success");
-      // //Dynamically changing Title of Page
-      // document.title="TextUtile _ light Mode";
-    }
+  const removeBodyClasses=()=>{
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-primary')
+    document.body.classList.remove('bg-info')
+    document.body.classList.remove('bg-secondary')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-light')
+
+  }
+
+  const togglemode=(cls)=>{
+    setMode(cls);
+    removeBodyClasses();
+    document.body.classList.add('bg-'+cls);
+    showAlert("Mode is Changed Successfully !! ",cls);
+    
   }
   
   return (

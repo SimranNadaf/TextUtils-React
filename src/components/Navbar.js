@@ -24,10 +24,10 @@ export default function Navbar(props) {
   // }
   return (
     <>
-    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
     <div className="container-fluid">
       {/* <Link className="navbar-brand" to="/">{props.title}</Link> */}
-      <a className="navbar-brand" href="">{props.title}</a>
+      <a className="navbar-brand" href="/">{props.title}</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +35,7 @@ export default function Navbar(props) {
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             {/* <Link className="nav-link active" aria-current="page" to="/">Home</Link> */}
-            <a className="nav-link active" aria-current="page" href="">Home</a>
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           {/* <li className="nav-item">
             <Link className="nav-link" to="/about">{props.AboutText}</Link> 
@@ -44,16 +44,29 @@ export default function Navbar(props) {
         </ul>
 
 
-        {/* <button type="button" className="btn mx-2" style={{backgroundColor:"#322152", padding:12, borderRadius:50}}  onClick={custom1}></button>
-        <button  type="button" className="btn mx-2" style={{backgroundColor:"#2d076b", padding:12, borderRadius:50}} onClick={custom2}></button>
-        <button type="button" className="btn mx-2" style={{backgroundColor:"#042f6e", padding:12, borderRadius:50}} onClick={custom3}></button>
-        <button type="button" className="btn mx-2" style={{backgroundColor:"#243856", padding:12, borderRadius:50}} onClick={custom4}></button> */}
-         
+        <div className='d-flex'>
+          <div className='bg-primary rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("primary")}}></div>
+          <div className='bg-success rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("success")}}></div>
+          <div className='bg-danger rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("danger")}}></div>
+          <div className='bg-warning rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("warning")}}></div>
+          <div className='bg-secondary rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("secondary")}}></div>
+          <div className='bg-info rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("info")}}></div>
+          <div className='bg-light rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("light")}}></div>
+          <div className='bg-dark rounded mx-2' style={{height:"30px",width:"30px",border:"1px solid black"}} onClick={()=>{props.toggle("dark")}}></div>
+        </div>
+        {/* <button type="button" className="btn mx-2 btn-primary rounded"   onClick={props.toggle}>Primary</button>
+        <button  type="button" className="btn mx-2  btn-success" onClick={custom2}>Success</button>
+        <button type="button" className="btn mx-2 btn-danger" onClick={custom3}>Danger</button>
+        <button type="button" className="btn mx-2 btn-warning"  onClick={custom4}>Warning</button>
+        <button type="button" class="btn mx-2 btn-info">Info</button>
+        <button type="button" class="btn mx-2 btn-light">Light</button>
+        <button type="button" class="btn mx-2 btn-dark">Dark</button>
+         */}
 
-            <div className={`form-check form-switch text-${props.mode==="dark"?"light":"dark"}`}>
+            {/* <div className={`form-check form-switch text-${props.mode==="dark"?"light":"dark"}`}>
             <input className="form-check-input mx-1" type="checkbox" id="flexSwitchCheckDefault" onClick={props.toggle}/>
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{`Enable ${props.mode==="dark"?"Light":"Dark"} Mode`}</label>
-            </div>
+            </div> */}
       </div>
     </div>
   </nav>

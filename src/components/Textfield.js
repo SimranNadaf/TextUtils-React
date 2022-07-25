@@ -85,16 +85,16 @@ export default function Textfield(props) {
     
   return(
      <>
-        <div className="mx-3 mb-3 container" style={{color:props.mode==="dark"?"white":"black"}}>
+        <div className="mx-3 mb-3 container" style={{"color":props.mode==="light"?"black":props.mode==="warning"?"black":props.mode==="info"?"black":"white"}}>
         <h1>{props.title}</h1>
-        <textarea className="form-control" id="textfield" style={{backgroundColor:props.mode==="dark"?"#21375a":"white", color:props.mode==="dark"?"white":"black"}} rows="8" onChange={changetext} value={text}></textarea>
+        <textarea className="form-control" id="textfield" style={{backgroundColor:"white", color:"black"}} rows="8" onChange={changetext} value={text}></textarea>
         <br/>
-        <button type="button" disabled={text.length===0} className="btn btn-primary mx-3 my-3" onClick={handleUp}>To UpperCase</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleLow}>To LowerCase</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleChar}>Remove Special Charaters</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleSpace}>Remove Extra Spaces</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleCopy}>Copy Text</button>
-        <button type="button" disabled={text===""?true:false} className="btn btn-primary mx-3 my-3" onClick={handleClear}>Clear Text</button>
+        <button type="button" disabled={text.length===0} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleUp}>To UpperCase</button>
+        <button type="button" disabled={text===""?true:false} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleLow}>To LowerCase</button>
+        <button type="button" disabled={text===""?true:false} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleChar}>Remove Special Charaters</button>
+        <button type="button" disabled={text===""?true:false} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleSpace}>Remove Extra Spaces</button>
+        <button type="button" disabled={text===""?true:false} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleCopy}>Copy Text</button>
+        <button type="button" disabled={text===""?true:false} style={{border:"1px solid black"}} className="btn btn-light mx-3 my-3" onClick={handleClear}>Clear Text</button>
         <div className='my-3'>
         <h2>Your Text Summary</h2>
         <p>{text.split(/\s/).filter((element)=>{return element.length!==0}).length} Words and {text.split('').filter((element)=>{return element!==" "}).length} Charaters</p> 
