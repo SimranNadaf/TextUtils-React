@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TextUtils---Cumstom-Colors-Modes/static/css/main.31d6cfe0.css",
-    "main.js": "/TextUtils---Cumstom-Colors-Modes/static/js/main.c4a3b8a4.js",
-    "static/js/787.0cbdef75.chunk.js": "/TextUtils---Cumstom-Colors-Modes/static/js/787.0cbdef75.chunk.js",
-    "index.html": "/TextUtils---Cumstom-Colors-Modes/index.html",
-    "main.c4a3b8a4.js.map": "/TextUtils---Cumstom-Colors-Modes/static/js/main.c4a3b8a4.js.map",
-    "787.0cbdef75.chunk.js.map": "/TextUtils---Cumstom-Colors-Modes/static/js/787.0cbdef75.chunk.js.map"
+    "main.css": "/TextUtils-CustomModes/static/css/main.31d6cfe0.css",
+    "main.js": "/TextUtils-CustomModes/static/js/main.688d614d.js",
+    "static/js/787.0cbdef75.chunk.js": "/TextUtils-CustomModes/static/js/787.0cbdef75.chunk.js",
+    "index.html": "/TextUtils-CustomModes/index.html",
+    "main.688d614d.js.map": "/TextUtils-CustomModes/static/js/main.688d614d.js.map",
+    "787.0cbdef75.chunk.js.map": "/TextUtils-CustomModes/static/js/787.0cbdef75.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.c4a3b8a4.js"
+    "static/js/main.688d614d.js"
   ]
 }
